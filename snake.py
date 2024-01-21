@@ -1,6 +1,5 @@
 import pygame
 import random
-from pygame import *
 
 # Инициализация pygame
 pygame.init()
@@ -19,11 +18,6 @@ orange = (255, 165, 0)
 # Создание окна
 window = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Змейка")
-
-background_image = pygame.image.load('D:\payton\galactika_war/galaxy.jpg')
-background_rect = background_image.get_rect()
-
-background_image = transform.scale(image.load('D:\payton\dogonialki/background.png'),(800, 600))
 
 clock = pygame.time.Clock()
 
@@ -102,7 +96,7 @@ def game_loop():
 
         x1 += x1_change
         y1 += y1_change
-        window.blit(background_image, (0, 0))
+        window.fill(black)
         pygame.draw.rect(window, red, [apple_x, apple_y, block_size, block_size])
         snake_head = []
         snake_head.append(x1)
